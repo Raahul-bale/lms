@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://lms-7v32.onrender.com/api';
 
 export async function apiRequest(path, method = 'GET', data = null, token = '') {
   const headers = { 'Content-Type': 'application/json' };
